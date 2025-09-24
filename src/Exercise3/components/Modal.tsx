@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import "./../styles/Modal.scss";
+import "./Modal.scss";
 
 type ModalProps = {
     title: string;
