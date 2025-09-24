@@ -1,0 +1,47 @@
+.counter {
+    width: 60%;
+    margin: 2rem auto;
+    padding: 1.5rem;
+    background: #f4f6f9;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    font-family: Arial, sans-serif;
+
+    h1 {
+        text-align: center;
+        margin-bottom: 1rem;
+        color: #333;
+    }
+
+    textarea {
+        width: 100%;
+        min-height: 120px;
+        padding: 1rem;
+        border: 1px solid #ccc;
+        border-radius: 8px;
+        box-sizing: border-box;
+        outline: none;
+        font-size: 1rem;
+        line-height: 1.5;
+
+        &:focus {
+            border-color: #007bff;
+        }
+    }
+
+    .metrics {
+        margin-top: 1.5rem;
+        background: #fff;
+        padding: 1rem;
+        border-radius: 8px;
+
+        p {
+            margin: 0.5rem 0;
+            font-size: 1rem;
+
+            strong {
+                color: #007bff;
+            }
+        }
+    }
+}
