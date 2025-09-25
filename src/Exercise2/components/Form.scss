@@ -1,11 +1,10 @@
+@use "../../assets/styles/mixins.scss" as mixin;
+@use "../../assets/styles/variables.scss" as variable;
+
 .form-container {
-    width: 50%;
+    @include mixin.modal-style();
     margin: 2rem auto;
-    padding: 1.5rem;
-    background: #f9f9f9;
-    border-radius: 12px;
     box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-    font-family: Arial, sans-serif;
 
     h2 {
         text-align: center;
@@ -37,7 +36,7 @@
             box-sizing: border-box;
 
             &:focus {
-                border-color: #007bff;
+                border-color: variable.$input-focus-color;
                 outline: none;
             }
         }
@@ -65,34 +64,7 @@
 
         button {
             flex: 1;
-            padding: 0.8rem;
-            font-size: 1rem;
-            border: none;
-            border-radius: 6px;
-            cursor: pointer;
-
-            &:disabled {
-                background: #ccc;
-                cursor: not-allowed;
-            }
-
-            &:not(:disabled) {
-                background: #007bff;
-                color: white;
-
-                &:hover {
-                    background: #0056b3;
-                }
-            }
-
-            &.reset {
-                background: #f0f0f0;
-                color: #333;
-
-                &:hover {
-                    background: #e0e0e0;
-                }
-            }
+            @include mixin.button-style();
         }
     }
 }

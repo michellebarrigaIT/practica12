@@ -8,6 +8,7 @@ export default function LazyModal() {
 
     return (
         <div className="lazy-modal">
+            <h1>Lazy Loaded Modal Page</h1>
             <button onClick={() => setOpen(true)}>Open Modal</button>
 
             {open && (

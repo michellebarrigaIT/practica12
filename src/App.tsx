@@ -3,6 +3,7 @@ import { Route, Routes } from 'react-router-dom'
 import CharacterCounter from './Exercise1/components/CharacterCounter'
 import Form from './Exercise2/components/Form'
 import LazyModal from './Exercise3/pages/LazyModal'
+import './App.scss'
 
 function App() {
 

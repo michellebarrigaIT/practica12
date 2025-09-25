@@ -66,7 +66,7 @@ function Form() {
                         type="text"
                         value={state.name}
                         onChange={(e) =>
-                        dispatch({ type: "UPDATE_FIELD", field: "name", value: e.target.value })
+                            dispatch({ type: "UPDATE_FIELD", field: "name", value: e.target.value })
                         }
                     />
                     {errors.name && <span className="error">{errors.name}</span>}
@@ -79,7 +79,7 @@ function Form() {
                         type="email"
                         value={state.email}
                         onChange={(e) =>
-                        dispatch({ type: "UPDATE_FIELD", field: "email", value: e.target.value })
+                            dispatch({ type: "UPDATE_FIELD", field: "email", value: e.target.value })
                         }
                     />
                     {errors.email && <span className="error">{errors.email}</span>}
