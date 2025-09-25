@@ -5,11 +5,11 @@ const WORDS_PER_MINUTE = 200;
 
 function CharacterCounter() {
     const [text, setText] = useState("");
-    const [debouncedText, setDebouncedText] = useState(text);
+    const [delayedText, setDelayedText] = useState(text);
 
     useEffect(() => {
         const handler = setTimeout(() => {
-            setDebouncedText(text);
+            setDelayedText(text);
         }, 500);
 
         return () => {
@@ -20,8 +20,8 @@ function CharacterCounter() {
     const metrics = useMemo(() => {
         console.log("Recalculando métricas...");
 
-        const words = debouncedText.trim().split(/\s+/).filter(Boolean);
-        const totalChars = debouncedText.length;
+        const words = delayedText.trim().split(/\s+/).filter(Boolean);
+        const totalChars = delayedText.length;
         const wordCount = words.length;
 
         const readingTime = wordCount > 0 ? (wordCount / WORDS_PER_MINUTE).toFixed(2) : "0";
@@ -35,7 +35,7 @@ function CharacterCounter() {
             readingTime,
             avgWordLength,
         };
-    }, [debouncedText]);
+    }, [delayedText]);
 
     return (
         <div className="counter">

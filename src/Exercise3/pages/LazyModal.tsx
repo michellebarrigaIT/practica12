@@ -1,13 +1,9 @@
 import { Suspense, useState, lazy } from "react";
 import { useForm } from "react-hook-form";
 import "./LazyModal.scss";
+import type { ModalData } from "../../types/LazyModalTypes";
 
 const Modal = lazy(() => import("../components/Modal"));
-
-type ModalData = {
-    title: string;
-    message: string;
-};
 
 export default function LazyModal() {
     const [open, setOpen] = useState(false);
